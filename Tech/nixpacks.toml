@@ -1,0 +1,16 @@
+[phases.setup]
+nixPkgs = [
+  "pkg-config",
+  "cairo",
+  "pango",
+  "libpng",
+  "jpeg",
+  "giflib",
+  "gdk-pixbuf",
+  "nodejs",
+  "python3",
+  "make",
+  "gcc",
+  "gnumake",
+  "glib"
+]
