@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech - Agente de IA Todo en Uno</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/sidebar.css" rel="stylesheet">
+    <link href="styles/chat.css" rel="stylesheet">
+    <link href="styles/components.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">🧠</div>
+                    <span class="logo-text">Tech</span>
+                </div>
+                <button class="new-task-btn" id="newTaskBtn">
+                    <i class="fas fa-plus"></i>
+                    <span>Nueva Tarea</span>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <h3>Funciones Principales</h3>
+                    <ul class="nav-list">
+                        <li class="nav-item" data-function="images">
+                            <button class="nav-button">
+                                <span class="nav-icon">📸</span>
+                                <span class="nav-text">Generar Imágenes</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" data-function="videos">
+                            <button class="nav-button">
+                                <span class="nav-icon">🎥</span>
+                                <span class="nav-text">Crear Videos</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" data-function="code">
+                            <button class="nav-button">
+                                <span class="nav-icon">💻</span>
+                                <span class="nav-text">Escribir Código</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" data-function="automation">
+                            <button class="nav-button">
+                                <span class="nav-icon">🔁</span>
+                                <span class="nav-text">Automatización</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" data-function="chat">
+                            <button class="nav-button">
+                                <span class="nav-icon">💬</span>
+                                <span class="nav-text">Chat General</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h3>Configuración</h3>
+                    <ul class="nav-list">
+                        <li class="nav-item" data-function="settings">
+                            <button class="nav-button">
+                                <span class="nav-icon">⚙️</span>
+                                <span class="nav-text">Ajustes</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" data-function="history">
+                            <button class="nav-button">
+                                <span class="nav-icon">📋</span>
+                                <span class="nav-text">Historial</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">👤</div>
+                    <div class="user-details">
+                        <span class="user-name">Usuario</span>
+                        <span class="user-status">En línea</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="header-title">
+                    <h1 id="currentFunctionTitle">Bienvenido a Tech</h1>
+                    <p id="currentFunctionDesc">Tu agente de IA todo en uno</p>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="themeToggle" title="Cambiar tema">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="header-btn" id="fullscreenToggle" title="Pantalla completa">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area" id="contentArea">
+                <!-- Welcome Screen -->
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="welcome-content">
+                        <div class="welcome-hero">
+                            <div class="hero-icon">🧠</div>
+                            <h2>¡Hola! Soy Tech</h2>
+                            <p>Tu agente de inteligencia artificial todo en uno. Puedo ayudarte con:</p>
+                        </div>
+                        
+                        <div class="capabilities-grid">
+                            <div class="capability-card" data-function="images">
+                                <div class="capability-icon">📸</div>
+                                <h3>Generar Imágenes</h3>
+                                <p>Crea imágenes increíbles con DALL-E 2 a partir de descripciones de texto</p>
+                            </div>
+                            <div class="capability-card" data-function="videos">
+                                <div class="capability-icon">🎥</div>
+                                <h3>Crear Videos</h3>
+                                <p>Genera videos completos con guión, voz, imágenes y música automáticamente</p>
+                            </div>
+                            <div class="capability-card" data-function="code">
+                                <div class="capability-icon">💻</div>
+                                <h3>Escribir Código</h3>
+                                <p>Desarrollo código en múltiples lenguajes con explicaciones detalladas</p>
+                            </div>
+                            <div class="capability-card" data-function="automation">
+                                <div class="capability-icon">🔁</div>
+                                <h3>Automatización</h3>
+                                <p>Automatiza tareas complejas integrando diferentes APIs y servicios</p>
+                            </div>
+                        </div>
+
+                        <div class="quick-start">
+                            <h3>¿Por dónde empezamos?</h3>
+                            <button class="quick-start-btn" data-function="images">
+                                <i class="fas fa-image"></i>
+                                Generar una imagen
+                            </button>
+                            <button class="quick-start-btn" data-function="videos">
+                                <i class="fas fa-video"></i>
+                                Crear un video
+                            </button>
+                            <button class="quick-start-btn" data-function="code">
+                                <i class="fas fa-code"></i>
+                                Escribir código
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Function Panels (Hidden by default) -->
+                <div class="function-panel" id="imagesPanel" style="display: none;">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+                
+                <div class="function-panel" id="videosPanel" style="display: none;">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+                
+                <div class="function-panel" id="codePanel" style="display: none;">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+                
+                <div class="function-panel" id="automationPanel" style="display: none;">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+                
+                <div class="function-panel" id="chatPanel" style="display: none;">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+                
+                <div class="function-panel" id="settingsPanel" style="display: none;">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h3 id="loadingTitle">Procesando...</h3>
+            <p id="loadingMessage">Por favor espera mientras trabajo en tu solicitud</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">0%</div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Modal Container -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content" id="modalContent">
+            <!-- Modal content will be inserted here -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/functions/images.js"></script>
+    <script src="js/functions/videos.js"></script>
+    <script src="js/functions/code.js"></script>
+    <script src="js/functions/automation.js"></script>
+    <script src="js/functions/chat.js"></script>
+    <script src="js/functions/settings.js"></script>
+</body>
+</html>

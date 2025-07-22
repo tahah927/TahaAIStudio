@@ -1,0 +1,44 @@
+{
+  "name": "tech-ai-agent",
+  "version": "1.0.0",
+  "description": "Tech - Agente de IA todo en uno con generación de imágenes, videos, código y automatización",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "npm install",
+    "postinstall": "node setup.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "uuid": "^9.0.1",
+    "fs-extra": "^11.1.1",
+    "multer": "^1.4.5",
+    "form-data": "^4.0.0",
+    "socket.io": "^4.7.4",
+    "openai": "^4.20.1",
+    "node-cron": "^3.0.3",
+    "sharp": "^0.32.6",
+    "canvas": "^2.11.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "ai-agent",
+    "dall-e",
+    "elevenlabs",
+    "video-generation",
+    "automation",
+    "code-generation"
+  ],
+  "author": "Tech AI Agent",
+  "license": "MIT"
+}
